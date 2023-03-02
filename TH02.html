@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Độ tuổi chịu trách nhiệm hình sự</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form{
+            height: 200px;
+            width: 300px;
+            margin: 40px auto;
+            border: 1px solid red;
+            padding: 20px;
+            background-color: rgb(146, 250, 250);
+        }
+        .name{
+            padding-bottom: 20px;
+        }
+    </style>
+ </head>
+ <body>
+    <section>
+        <form action="" method="post" name="check">
+            <div class="name">
+                <i><b>Enter name:</b></i><br>
+                <label for="ten"></label>
+                <input type="text" id="ten" name="ten" placeholder="Nhập tên">
+            </div>
+            <div class="age">
+                <i><b>Enter age:</b></i><br>
+                <label for="tuoi"></label>
+                <input type="number" id="tuoi" name="tuoi" placeholder="Nhập tuổi">
+            </div>
+            <div class="button-reset">
+                <br>
+                <hr width="165px">
+                <br>
+                <input type="button" name="" value="check" onclick="fn_check()">
+                <input type="reset" name="" value="clear">
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function fn_check(){
+            var username = document.getElementById("ten").value
+            var age=document.getElementById("tuoi").value
+
+            console.log(username,age);
+            if(age<18){
+                document.writeln(username,": Độ tuổi chưa đủ 18, ăn chs thoải mái")
+            }
+            else{
+                document.writeln(username,": Độ tuổi chịu trách nhiệm hình sự, hãy cẩn thận haha")
+            }
+        }
+    </script> 
+ </body>
+ </html>
